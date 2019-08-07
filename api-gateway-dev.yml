@@ -3,6 +3,8 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
+  #忽略敏感头设置(全部服务都可以传递cookie)  
+  sensitive-headers:  
   routes:
 #    myProduct:
 #      path: /myProduct/**
