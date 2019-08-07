@@ -1,0 +1,17 @@
+spring:
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+  routes:
+#    myProduct:
+#      path: /myProduct/**
+#      serviceId: product
+#    简洁写法
+    product: /myProduct/**
+#    排除某些方法
+  ignored-patterns:
+    - /**/product/msg
+management:
+  security:
+    enabled: false
